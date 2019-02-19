@@ -1,3 +1,5 @@
 ofxGui
-ofxXmlSettings
+ofxNetwork
 ofxPJControl
+ofxPoco
+ofxXmlSettings
