@@ -89,7 +89,6 @@ void ofxPJControl::sendPJLinkCommand(string command) {
 		string msgRx="";
 
         if(!pjClient.isConnected()) {
-            pjClient.setVerbose(true);
             connected = pjClient.setup(IPAddress, pjPort,true);
             if(connected){
                 ofLogNotice() << "connection established: " << IPAddress << ":" << pjPort << endl;
@@ -135,7 +134,6 @@ void ofxPJControl::sendPJLinkCommand(string command) {
 
 void ofxPJControl::sendCommand(string command){
         if(!pjClient.isConnected()) {
-			pjClient.setVerbose(true);
 			ofLogNotice() << "connecting to : " << IPAddress << ":" << pjPort << endl;
 			connected = pjClient.setup(IPAddress, pjPort, true);
 			ofLogNotice() << "connection state : " << connected;
@@ -161,7 +159,6 @@ void ofxPJControl::nec_On(){
 	buffer[4] = 0;
 	buffer[5] = 2;
 
-	pjClient.setVerbose(true);
 	if(!pjClient.isConnected()) {
 		connected = pjClient.setup(IPAddress, NEC_PORT);
 		ofLogNotice() << "connection established: " << IPAddress << ":" << NEC_PORT << endl;
@@ -196,7 +193,6 @@ void ofxPJControl::nec_Off() {
 
 	projStatus = true;
 
-	pjClient.setVerbose(true);
 
 	if(!pjClient.isConnected()) {
 		connected = pjClient.setup(IPAddress, NEC_PORT);
