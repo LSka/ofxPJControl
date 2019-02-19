@@ -177,8 +177,8 @@ void ofxPJControl::nec_On(){
 
 	projStatus = true;
 
-	delete rxBuffer;
-	delete buffer;
+	delete[] rxBuffer;
+	delete[] buffer;
 }
 
 void ofxPJControl::nec_Off() {
@@ -213,8 +213,8 @@ void ofxPJControl::nec_Off() {
 
 	projStatus = false;
 
-	delete rxBuffer;
-	delete buffer;
+	delete[] rxBuffer;
+	delete[] buffer;
 }
 
 void ofxPJControl::pjLink_On() {
