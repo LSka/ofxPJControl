@@ -140,9 +140,9 @@ void ofxPJControl::sendCommand(string command){
 		}
         ofLogNotice() << "sending command : " << command << endl;
         pjClient.sendRaw(command);
-        ofLogNotice() << "Response length (Bytes) : " << pjClient.getNumReceivedBytes() << endl;
         msgRx = "";
         msgRx = pjClient.receiveRaw();
+        ofLogNotice() << "Response length (Bytes) : " << pjClient.getNumReceivedBytes() << endl;
         ofLogNotice() << "received response : " << msgRx << endl;
 
         pjClient.close();
