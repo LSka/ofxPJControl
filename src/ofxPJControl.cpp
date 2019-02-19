@@ -89,7 +89,7 @@ void ofxPJControl::sendPJLinkCommand(string command) {
 		string msgRx="";
 
         if(!pjClient.isConnected()) {
-            connected = pjClient.setup(IPAddress, pjPort,true);
+            connected = pjClient.setup(IPAddress, pjPort,false);
             if(connected){
                 ofLogNotice() << "connection established: " << IPAddress << ":" << pjPort << endl;
                 string response = "";
