@@ -135,7 +135,7 @@ void ofxPJControl::sendPJLinkCommand(string command) {
 void ofxPJControl::sendCommand(string command){
         if(!pjClient.isConnected()) {
 			ofLogNotice() << "connecting to : " << IPAddress << ":" << pjPort << endl;
-			connected = pjClient.setup(IPAddress, pjPort, true);
+			connected = pjClient.setup(IPAddress, pjPort, false);
 			ofLogNotice() << "connection state : " << connected;
 		}
         ofLogNotice() << "sending command : " << command << endl;
