@@ -21,6 +21,7 @@ using Poco::DigestEngine;
 using Poco::MD5Engine;
 using Poco::DigestOutputStream;
 using Poco::StreamCopier;
+using namespace std;
 
 
 const int NEC_PORT = 7142; //NEC projector port
