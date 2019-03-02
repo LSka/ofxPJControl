@@ -86,7 +86,7 @@ void ofxPJControl::Off(){
 }
 
 void ofxPJControl::sendPJLinkCommand(string command) {
-		string msgRx="";
+		msgRx="";
 
         if(!pjClient.isConnected()) {
             connected = pjClient.setup(IPAddress, pjPort,false);
@@ -143,6 +143,7 @@ void ofxPJControl::sendCommand(string command){
         msgRx = "";
         msgRx = pjClient.receiveRaw();
         ofLogNotice() << "Response length (Bytes) : " << pjClient.getNumReceivedBytes() << endl;
+
         ofLogNotice() << "received response : " << msgRx << endl;
 
         pjClient.close();
@@ -223,12 +224,18 @@ void ofxPJControl::pjLink_On() {
     projStatus = true; //projector on
 
 }
-
 void ofxPJControl::pjLink_Off() {
 	string command = "%1POWR 0\r";
 	sendPJLinkCommand(command);
 	projStatus = false; //projector off
 }
+void ofxPJControl::pjLink_PowerQuery() {
+    string command = "%1POWR ?\r";
+    sendPJLinkCommand(command);
+    status = msgRx.back();
+    ofLog()<<status<<endl;
+}
+
 
 void ofxPJControl::sanyo_On() {
 	string command = "PWR ON\r";

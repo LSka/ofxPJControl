@@ -54,6 +54,7 @@ public:
 	bool getProjectorStatus(); //return whether projector is on (true) or off (false)
 	void setProjectorPort(int port); //the network port of the projector
 	void sendCommand(string command); //send any string command to the projector without password authentication
+    char status;
 
 private:
 
@@ -61,6 +62,7 @@ private:
 	void nec_Off();
 	void pjLink_On();
 	void pjLink_Off();
+    void pjLink_PowerQuery();
 	void sanyo_On();
 	void sanyo_Off();
 	void christie_On();
