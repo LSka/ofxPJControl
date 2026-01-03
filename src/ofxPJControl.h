@@ -13,6 +13,7 @@
 #define OFXPJCONTROL_H
 
 #include "ofxNetwork.h"
+#include "quickdigest5.hpp"
 
 
 const int NEC_PORT = 7142; //NEC projector port
