@@ -13,14 +13,6 @@
 #define OFXPJCONTROL_H
 
 #include "ofxNetwork.h"
-#include "Poco/MD5Engine.h"
-#include "Poco/DigestStream.h"
-#include "Poco/StreamCopier.h"
-
-using Poco::DigestEngine;
-using Poco::MD5Engine;
-using Poco::DigestOutputStream;
-using Poco::StreamCopier;
 
 
 const int NEC_PORT = 7142; //NEC projector port

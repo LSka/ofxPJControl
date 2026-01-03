@@ -135,12 +135,12 @@ bool ofxPJControl::sendPJLinkCommand(string command)
 		if (msgRx[7] == '1')
 		{
 			ofLogNotice("", "try with authentication");
-			MD5Engine md5;
-			md5.reset();
-			string hash = msgRx.substr(9, 8);
-			ofLogNotice() << hash << endl;
-			md5.update(hash + password);
-			authToken = DigestEngine::digestToHex(md5.digest());
+//			MD5Engine md5;
+//			md5.reset();
+//			string hash = msgRx.substr(9, 8);
+//			ofLogNotice() << hash << endl;
+//			md5.update(hash + password);
+//			authToken = DigestEngine::digestToHex(md5.digest());
 		}
 		ofLogNotice("sending command: %s %s", authToken.c_str(), command.c_str());
 		pjClient.sendRaw(authToken + command);
