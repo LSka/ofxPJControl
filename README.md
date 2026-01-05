@@ -4,6 +4,8 @@ ofxPJControl
 
 An openFrameworks addon to send commands to video projectors over a network
 
+**Updated for openFrameworks 0.12.1**
+
 #### Supported Projectors
 
 - PJLink (most projectors)
@@ -14,6 +16,7 @@ An openFrameworks addon to send commands to video projectors over a network
 #### Dependency
 
  - ofxNetwork core addon
+ - included the external library **QuickDigest5** https://github.com/nthnn/QuickDigest5 to replace the Poco library. (the one included in the ofxPoco addon lacks support for MD5, at least on MacOS)
 
 #### PJLink Specification
 
@@ -66,7 +69,10 @@ projector1.On();
 projector1.Off(); 
 ```
 
-#### Author
+#### Credits
 
-* [Noah Shibley](https://github.com/nullboundary)
+* original addon by [Noah Shibley](https://github.com/nullboundary)
+* updated version by [LSKA](https://github.com/LSka/)
+* QuickDigest5 library by [Nathanne Isip](https://github.com/nthnn)
+
 

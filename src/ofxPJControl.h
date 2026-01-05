@@ -3,6 +3,7 @@
  *
  *  Created by Noah Shibley on 8/9/10.
  *  Updated by Martial GALLORINI on 19/03/2015
+ *	Updated by Luca Scapellato on 03/01/2026
  *
 	Video projector control class.
  *
