@@ -212,8 +212,8 @@ bool ofxPJControl::nec_On()
 
 	projStatus = true;
 
-	delete rxBuffer;
-	delete buffer;
+	delete[] rxBuffer;
+	delete[] buffer;
 	return result;
 }
 
@@ -252,8 +252,8 @@ bool ofxPJControl::nec_Off()
 
 	projStatus = false;
 
-	delete rxBuffer;
-	delete buffer;
+	delete[] rxBuffer;
+	delete[] buffer;
 	return result;
 }
 
